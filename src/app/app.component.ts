@@ -10,8 +10,10 @@ import { DialogContentBase } from '@progress/kendo-angular-dialog';
             <button kendoButton themeColor="primary" icon="trash" (click)="openDialog()">
                 Open dialog
             </button>
+            <br>
+            <br>
             <button kendoButton themeColor="primary" icon="trash" (click)="openDialogWithGenerics()">
-            Open dialog
+            Open generic dialog (this don't work)
         </button>
         </div>
 
