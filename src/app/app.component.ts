@@ -32,19 +32,18 @@ export class AppComponent {
     const userInfo = dialogRef.content.instance as UserInfoComponent;
   }
 
-  public openDialogWithGenerics(){
-    //  const dialogRef: DialogRef = this.genericOpenDialog(UserInfoComponent) I can do that
+  public openDialogWithGenerics() {
+    //  const dialogRef: DialogRef = this.genericOpenDialog(UserInfoComponent) I can`t do that
   }
 
-  public genericOpenDialog<TCOMPONENT extends DialogContentBase>(component: TCOMPONENT) : DialogRef {
-
+  public genericOpenDialog<TCOMPONENT extends DialogContentBase>(
+    component: TCOMPONENT
+  ): DialogRef {
     const dialogRef: DialogRef = this.dialogService.open({
-        // Show component
-       // content: component, //I can do that
-      });
-  
-      return dialogRef;
+      // Show component
+      // content: component, //I can't do that
+    });
 
-
+    return dialogRef;
   }
 }
